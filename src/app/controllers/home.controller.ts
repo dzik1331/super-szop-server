@@ -1,4 +1,4 @@
-import { ApiController, Controller, HttpGet, BindNumber } from 'dinoloop';
+import {ApiController, Controller, HttpGet, BindNumber} from 'dinoloop';
 
 @Controller('/home')
 export class HomeController extends ApiController {
@@ -9,7 +9,7 @@ export class HomeController extends ApiController {
     }
 
     @HttpGet('/user/:id')
-    user(@BindNumber() id: number): number {
-        return id;
+    user(id): any {
+        return {number: id};
     }
 }
