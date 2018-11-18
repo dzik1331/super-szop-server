@@ -1,6 +1,6 @@
 **http://localhost:8443**
 ********************************
-##- **LOGOWANIE**
+## **LOGOWANIE**
 
 `/api/user/login [POST]`
 
@@ -22,7 +22,7 @@ Odpowiedź:
 `NO_FOUND lub BAD_PASSWORD`
 ********************************
 
-##- **Role użytkownika**
+## **Role użytkownika**
 
 `/api/user/roles [Get]`
 
@@ -38,7 +38,7 @@ Odpowiedź:
 ##### Status: 404
 ********************************
 
-##- **DODAWANIE Użytkownika**
+## **DODAWANIE Użytkownika**
 
 `/api/user/add [POST]`
 
@@ -59,7 +59,7 @@ Odpowiedź:
 ##### Status: 404
 ********************************
 
-##- **LISTA TAGÓW**
+## **LISTA TAGÓW**
 
 `/api/product/tags [GET]`
 
@@ -69,7 +69,7 @@ Odpowiedź:
 
 ********************************
 
-##- **LISTA PRODUKTÓW**
+## **LISTA PRODUKTÓW**
 
 `/api/product/list [GET]`
 
@@ -89,7 +89,7 @@ Odpowiedź:
 
 ********************************
 
-##- **DODAWANIE PRODUKTU**
+## **DODAWANIE PRODUKTU**
 
 `/api/product/add [POST]`
 
