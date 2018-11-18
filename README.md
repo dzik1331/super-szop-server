@@ -12,7 +12,7 @@
 
 [Dodawanie produktu](#dodawanie-produktu)
 
-## **LOGOWANIE**
+## **Logowanie**
 
 `/api/user/login [POST]`
 
@@ -50,7 +50,7 @@ Odpowiedź:
 ##### Status: 404
 ********************************
 
-## **DODAWANIE Użytkownika**
+## **Dodawanie użytkownika**
 
 `/api/user/add [POST]`
 
@@ -71,7 +71,7 @@ Odpowiedź:
 ##### Status: 404
 ********************************
 
-## **LISTA TAGÓW**
+## **Lista tagów**
 
 `/api/product/tags [GET]`
 
@@ -82,7 +82,7 @@ Odpowiedź:
 
 ********************************
 
-## **LISTA PRODUKTÓW**
+## **Lista produktów**
 
 `/api/product/list [GET]`
 
@@ -102,7 +102,7 @@ Odpowiedź:
 
 ********************************
 
-## **DODAWANIE PRODUKTU**
+## **Dodawanie produktu**
 
 `/api/product/add [POST]`
 
