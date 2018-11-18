@@ -9,7 +9,7 @@ Wysyłamy:
     
 Odpowiedź:
 
-#####Status: 200
+##### Status: 200
     {
         login: 'Login', 
         name: 'Imię', 
@@ -17,7 +17,7 @@ Odpowiedź:
         role: 1
     }
 
-#####Status 404
+##### Status 404
 
 `NO_FOUND lub BAD_PASSWORD`
 ********************************
@@ -29,13 +29,13 @@ Odpowiedź:
 
 Odpowiedź:
 
-#####Status: 200
+##### Status: 200
     [
         {"id":1,"name":"administrator"},
         {"id":2,"name":"użytkownik"},
         {"id":3,"name":"sprzedawca"}
     ]
-#####Status: 404
+##### Status: 404
 ********************************
 
 ##- **DODAWANIE Użytkownika**
@@ -54,9 +54,9 @@ Wysyłamy:
 
 Odpowiedź:
 
-#####Status: 200
+##### Status: 200
     Added
-#####Status: 404
+##### Status: 404
 ********************************
 
 ##- **LISTA TAGÓW**
@@ -106,8 +106,8 @@ Wysyłamy:
 
 Odpowiedź:
 
-#####Status: 200
+##### Status: 200
     Added
-#####Status: 404
+##### Status: 404
     NO_FOUND
 ********************************
