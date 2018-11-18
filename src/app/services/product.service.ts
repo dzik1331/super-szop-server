@@ -1,4 +1,7 @@
 import {Injectable} from "injection-js";
+import {database} from "../app";
+import {Observable} from "rxjs";
+import {MainService} from "./mainService";
 
 interface Product {
     id;
@@ -10,42 +13,52 @@ interface Product {
 }
 
 @Injectable()
-export class ProductService {
+export class ProductService extends MainService{
 
-    products: Product[] = [
-        {
-            id: 1,
-            name: 'Produkt 1',
-            price: 25,
-            tags: ['elektronika', 'komputery Pc'],
-            img: 'https://bakoma.pl/wp-content/uploads/bio_truskawka_370x370-200x200.png',
-            description: 'Produkt najwyższej jakości, wyprodukowany w Chinach'
-        },
-        {
-            id: 2,
-            name: 'Produkt 2',
-            price: 501.45,
-            tags: ['elektronika', 'komputery Pc'],
-            img: 'http://www.aleradetails.com/wp-content/uploads/2016/08/238239-200x200.jpg',
-            description: 'Produkt najwyższej jakości, wyprodukowany w Chinach'
-        },
-        {
-            id: 3,
-            name: 'Produkt 3',
-            price: 49.99,
-            tags: ['elektronika', 'komputery Pc'],
-            img: 'http://superhitproducts.in/wp-content/uploads/2017/01/i-love-sundays-black-mug-31-200x200.jpg',
-            description: 'Produkt najwyższej jakości, wyprodukowany w Chinach'
-        },
-        {
-            id: 4,
-            name: 'Produkt 4',
-            price: 100,
-            tags: ['elektronika', 'komputery Pc'],
-            img: 'http://avoornetworks.com/wp-content/uploads/2016/10/wireless-cisco-200x200.png',
-            description: 'Produkt najwyższej jakości, wyprodukowany w Chinach'
-        }
-    ];
+    getAll() {
+        return new Observable((observer) => {
+            database.all("Select * From products", (err, data) => {
+                if (err != null)
+                    observer.next(null);
+                else
+                    observer.next(data)
+                observer.complete();
+            });
+        })
+
+    }
+
+    addProduct(data) {
+        return new Observable((observer) => {
+            let sql = `INSERT INTO products (
+                         producer,
+                         description,
+                         img,
+                         tags,
+                         price,
+                         name
+                     )
+                     VALUES (
+                         ${this.dataToString(data.producer) || null},
+                         ${this.dataToString(data.description) || null},
+                         ${this.dataToString(data.img)},
+                         ${this.dataToString(data.tags.join(',')) || null},
+                         ${data.price},
+                         ${this.dataToString(data.name)}
+                     )`;
+            console.debug('SQL', sql);
+            database.run(sql, (err) => {
+                console.debug('err', err);
+                if (err) {
+                    observer.error(err)
+                } else {
+                    observer.next('Added')
+                }
+                observer.complete();
+            });
+        })
+    }
+
 
     getTags() {
         return [
