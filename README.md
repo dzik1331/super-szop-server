@@ -1,6 +1,17 @@
 **http://localhost:8443**
 ********************************
-[link](#lista-tagów)
+[Logowanie](#logowanie)
+
+[Role użytkownika](#role-użytkownika)
+
+[Dodawanie użytkownika](#dodawanie-użytkownika)
+
+[Lista tagów](#lista-tagów)
+
+[Lista produktów](#lista-produktów)
+
+[Dodawanie produktu](#dodawanie-produktu)
+
 ## **LOGOWANIE**
 
 `/api/user/login [POST]`
@@ -68,6 +79,7 @@ Odpowiedź:
 
     ['tag1', 'tag2', 'tag3',...]
 
+
 ********************************
 
 ## **LISTA PRODUKTÓW**
@@ -112,5 +124,3 @@ Odpowiedź:
 ##### Status: 404
     NO_FOUND
 ********************************
-
-# Dupa
