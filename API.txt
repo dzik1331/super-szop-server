@@ -1,0 +1,39 @@
+http://localhost:8443
+
+LOGOWANIE
+********************************
+/api/user/login [POST]
+
+wysyłamy: 
+{ 	
+	login: 'login',
+	password: 'password'
+}
+
+********************************
+
+LISTA TAGÓW
+********************************
+/api/product/tags [GET]
+
+********************************
+
+LISTA PRODUKTÓW
+********************************
+/api/product/list [GET]
+********************************
+
+DODAWANIE PRODUKTU
+********************************
+/api/product/add [POST]
+
+wysyłamy: 
+{
+producer: 'Nazwa producenta',
+description: 'Opis',
+img: 'Adres zdjęcia',
+tags: 'tag1,tag2,tag3',
+price: 99.99,
+name: 'Nazwa produktu'
+}
+********************************
