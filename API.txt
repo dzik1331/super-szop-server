@@ -10,8 +10,19 @@ wysyłamy:
 	password: 'password'
 }
 
-********************************
+W odpowiedzi dostajemy:
+Status: 200
+{
+    login: 'Login',
+    name: 'Imię',
+    lastName: 'Nazwisko',
+    role: 1
+}
 
+Status 404
+NO_FOUND lub BAD_PASSWORD
+
+********************************
 LISTA TAGÓW
 ********************************
 /api/product/tags [GET]
