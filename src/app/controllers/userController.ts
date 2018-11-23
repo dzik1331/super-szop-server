@@ -13,10 +13,11 @@ export class UserController extends ApiController {
     login(body: any) {
         console.log(body);
         this.userService.login(body).subscribe((result) => {
-            console.debug('LOGIN', result);
-            this.response.status(HttpStatusCode.oK).json(result)
+            this.userService.addSession(result).subscribe((data) => {
+                result['userSession'] = data;
+                this.response.status(HttpStatusCode.oK).json(result)
+            })
         }, (error) => {
-            console.debug('LOGIN_ERROR', error);
             this.response.status(HttpStatusCode.notFound).json(error)
         })
         // return {result: {login: body.login, name: null, role: 'administrator'}};

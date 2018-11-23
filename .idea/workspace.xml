@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="537f8dbc-d9ae-428b-9315-a5b644ec7d1f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/API.txt" beforeDir="false" afterPath="$PROJECT_DIR$/API.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/controllers/productController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/controllers/productController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/controllers/userController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/controllers/userController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/services/mainService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/mainService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/services/product.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/product.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/services/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/user.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dataBase.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/dataBase.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.db" beforeDir="false" afterPath="$PROJECT_DIR$/test.db" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -15,25 +22,16 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DockManager">
-    <window id="2">
+    <window id="1">
       <content type="file-editors">
         <state>
           <leaf>
-            <file pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/API.txt">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state>
-                    <caret selection-end-line="49" selection-end-column="32" />
-                  </state>
-                </provider>
-              </entry>
-            </file>
             <file pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/README.md">
                 <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
                   <state split_layout="SPLIT">
-                    <first_editor relative-caret-position="360">
-                      <caret line="90" column="5" lean-forward="true" selection-start-line="90" selection-start-column="5" selection-end-line="90" selection-end-column="5" />
+                    <first_editor relative-caret-position="251">
+                      <caret line="87" column="31" selection-start-line="87" selection-start-column="31" selection-end-line="87" selection-end-column="55" />
                     </first_editor>
                     <second_editor />
                   </state>
@@ -45,72 +43,13 @@
       </content>
     </window>
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="1953041519">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="7" />
-          <entry key="project.open.time.0" value="3" />
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.13" value="1" />
-          <entry key="project.open.time.14" value="1" />
-          <entry key="project.open.time.4" value="1" />
-          <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="8" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.js.language.service.starts">
-        <counts>
-          <entry key="TypeScriptServerServiceImpl" value="8" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="js" value="4" />
-          <entry key="json" value="4" />
-          <entry key="md" value="4" />
-          <entry key="sql" value="1" />
-          <entry key="ts" value="8" />
-          <entry key="txt" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="JSON" value="4" />
-          <entry key="JavaScript" value="4" />
-          <entry key="Markdown" value="4" />
-          <entry key="PLAIN_TEXT" value="2" />
-          <entry key="SQL" value="1" />
-          <entry key="TypeScript" value="8" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="json" value="6" />
-          <entry key="md" value="824" />
-          <entry key="sql" value="54" />
-          <entry key="ts" value="1837" />
-          <entry key="txt" value="182" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JSON" value="6" />
-          <entry key="Markdown" value="824" />
-          <entry key="PLAIN_TEXT" value="182" />
-          <entry key="SQL" value="54" />
-          <entry key="TypeScript" value="1837" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/services/product.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-80">
-              <caret line="19" column="50" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
+            <state relative-caret-position="153">
+              <caret line="30" column="48" selection-start-line="30" selection-start-column="48" selection-end-line="30" selection-end-column="48" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -118,20 +57,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/app/services/mainService.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="29" column="12" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="12" />
+            <state relative-caret-position="204">
+              <caret line="18" column="36" lean-forward="true" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -139,7 +72,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/app.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
+            <state relative-caret-position="68">
               <caret line="10" column="13" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="13" />
               <folding>
                 <element signature="n#express#0" expanded="true" />
@@ -151,8 +84,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dataBase.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+            <state relative-caret-position="187">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
             </state>
           </provider>
         </entry>
@@ -160,8 +93,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/controllers/productController.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+            <state relative-caret-position="801">
+              <caret line="50" column="15" lean-forward="true" selection-start-line="50" selection-start-column="15" selection-end-line="50" selection-end-column="15" />
               <folding>
                 <element signature="e#0#101#0" expanded="true" />
               </folding>
@@ -172,8 +105,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/services/user.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="45" column="4" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
+            <state relative-caret-position="648">
+              <caret line="92" column="42" lean-forward="true" selection-start-line="92" selection-start-column="42" selection-end-line="92" selection-end-column="42" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -184,16 +117,25 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/controllers/userController.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="39" column="28" lean-forward="true" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
+            <state relative-caret-position="255">
+              <caret line="16" column="45" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/controllers/home.controller.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/container.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
+            <state relative-caret-position="215">
               <caret line="18" column="16" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="16" />
             </state>
           </provider>
@@ -213,7 +155,11 @@
       <find>clone</find>
       <find>Da</find>
       <find>console.debug</find>
+      <find>console.debu</find>
     </findStrings>
+    <dirStrings>
+      <dir>C:\Users\knieradz\Documents\Projekty\super-szop-server\src</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -226,39 +172,25 @@
         <option value="$PROJECT_DIR$/src/app/controllers/device.controller.ts" />
         <option value="$PROJECT_DIR$/src/app/container.ts" />
         <option value="$PROJECT_DIR$/src/app/app.ts" />
-        <option value="$PROJECT_DIR$/src/app/controllers/productController.ts" />
-        <option value="$PROJECT_DIR$/src/app/services/mainService.ts" />
-        <option value="$PROJECT_DIR$/src/app/services/product.service.ts" />
-        <option value="$PROJECT_DIR$/src/dataBase.sql" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/src/app/controllers/userController.ts" />
-        <option value="$PROJECT_DIR$/src/app/services/user.service.ts" />
         <option value="$PROJECT_DIR$/API.txt" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/dist/services/user.service.js" />
+        <option value="$PROJECT_DIR$/src/dataBase.sql" />
+        <option value="$PROJECT_DIR$/dist/controllers/productController.js" />
+        <option value="$PROJECT_DIR$/src/app/controllers/userController.ts" />
+        <option value="$PROJECT_DIR$/src/app/services/user.service.ts" />
+        <option value="$PROJECT_DIR$/src/app/controllers/productController.ts" />
+        <option value="$PROJECT_DIR$/src/app/services/product.service.ts" />
+        <option value="$PROJECT_DIR$/src/app/services/mainService.ts" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
-    <package-json value="$PROJECT_DIR$/package.json" />
-  </component>
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="NodeModulesDirectoryManager">
-    <handled-path value="$PROJECT_DIR$/node_modules" />
-  </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths>
-      <path value="$PROJECT_DIR$/package.json" />
-    </packageJsonPaths>
-  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1912" />
+    <option name="x" value="1672" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1066" />
+    <option name="width" value="1696" />
+    <option name="height" value="1036" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -272,56 +204,30 @@
         <subPane>
           <expand>
             <path>
-              <item name="inventory_server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inventory_server" type="462c0819:PsiDirectoryNode" />
+              <item name="super-szop-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="super-szop-server" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="inventory_server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inventory_server" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="inventory_server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inventory_server" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="dinoloop" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="inventory_server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inventory_server" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="dinoloop" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="inventory_server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inventory_server" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="dinoloop" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="constants" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="inventory_server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inventory_server" type="462c0819:PsiDirectoryNode" />
+              <item name="super-szop-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="super-szop-server" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="inventory_server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inventory_server" type="462c0819:PsiDirectoryNode" />
+              <item name="super-szop-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="super-szop-server" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="inventory_server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inventory_server" type="462c0819:PsiDirectoryNode" />
+              <item name="super-szop-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="super-szop-server" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="inventory_server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="inventory_server" type="462c0819:PsiDirectoryNode" />
+              <item name="super-szop-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="super-szop-server" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="services" type="462c0819:PsiDirectoryNode" />
@@ -334,7 +240,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../inventory" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="node.js.detected.package.prettier" value="true" />
     <property name="node.js.path.for.package.prettier" value="project" />
     <property name="node.js.selected.package.prettier" value="" />
@@ -391,17 +297,18 @@
       <workItem from="1542053104756" duration="29000" />
       <workItem from="1542456625231" duration="7016000" />
       <workItem from="1542539771335" duration="7348000" />
+      <workItem from="1542965077735" duration="11619000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41061000" />
+    <option name="totallyTimeSpent" value="52680000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1066" extended-state="6" />
+    <frame x="1672" y="-8" width="1696" height="1036" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24973656" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24969843" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -414,7 +321,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="8" weight="0.32897604" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32897604" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.3282353" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -427,9 +334,6 @@
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.sql" />
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/node_modules/dinoloop/modules/controller/api.controller.d.ts">
@@ -456,13 +360,6 @@
     <entry file="file://$PROJECT_DIR$/node_modules/sqlite3/sqlite3.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/controllers/home.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/sqlite3/lib/sqlite3.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -471,12 +368,87 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/package-lock.json" />
+    <entry file="file://$PROJECT_DIR$/node_modules/dinoloop/modules/constants/http.status.code.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="12" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/app.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
+        <state relative-caret-position="68">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="13" />
           <folding>
             <element signature="n#express#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/container.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="18" column="16" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="49" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/controllers/home.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="251">
+            <caret line="87" column="31" selection-start-line="87" selection-start-column="31" selection-end-line="87" selection-end-column="55" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/controllers/userController.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="16" column="45" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/controllers/productController.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="801">
+          <caret line="50" column="15" lean-forward="true" selection-start-line="50" selection-start-column="15" selection-end-line="50" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#101#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/services/user.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="92" column="42" lean-forward="true" selection-start-line="92" selection-start-column="42" selection-end-line="92" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/services/product.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="30" column="48" selection-start-line="30" selection-start-column="48" selection-end-line="30" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -490,83 +462,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dataBase.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/dinoloop/modules/constants/http.status.code.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="12" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/API.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="49" selection-end-column="32" />
+        <state relative-caret-position="187">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/services/mainService.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/services/product.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-80">
-          <caret line="19" column="50" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
+        <state relative-caret-position="204">
+          <caret line="18" column="36" lean-forward="true" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
           <folding>
-            <element signature="e#0#40#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/controllers/userController.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="39" column="28" lean-forward="true" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/services/user.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="45" column="4" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/controllers/productController.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#101#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/container.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="18" column="16" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="360">
-            <caret line="90" column="5" lean-forward="true" selection-start-line="90" selection-start-column="5" selection-end-line="90" selection-end-column="5" />
-          </first_editor>
-          <second_editor />
         </state>
       </provider>
     </entry>

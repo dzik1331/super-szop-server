@@ -23,6 +23,7 @@ Odpowiedź:
 
 ##### Status: 200
     {
+        id: 1,
         login: 'Login', 
         name: 'Imię', 
         lastName: 'Nazwisko', 
@@ -84,7 +85,9 @@ Odpowiedź:
 
 ## **Lista produktów**
 
-`/api/product/list [GET]`
+`/api/product/list [GET]` lub `/api/product/list/userId - tutaj podajemy id użytkownika [GET]`
+
+##### Podając userId dostajemy produkty tylko wybranego użytkownika, bez userId liste wszystkich produktów z bazy
 
 Odpowiedź:
     
@@ -96,7 +99,9 @@ Odpowiedź:
             "tags":"Elektronika",
             "img":"http://images.pl/1.png",
             "description":"Opis",
-            "producer":'BikCompany'}
+            "producer":'BikCompany',
+            "userId": 12
+            }
             ,...
     ]
 
@@ -114,7 +119,8 @@ Wysyłamy:
         img: 'Adres zdjęcia',
         tags: ['tag1,tag2,tag3'],
         price: 99.99,
-        name: 'Nazwa produktu'
+        name: 'Nazwa produktu',
+        userId: 1
     }
 
 Odpowiedź:

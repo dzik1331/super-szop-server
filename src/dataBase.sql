@@ -1,13 +1,3 @@
-CREATE TABLE products (
-    id          INTEGER       PRIMARY KEY AUTOINCREMENT,
-    name        VARCHAR (255) NOT NULL,
-    price       REAL          NOT NULL,
-    tags        TEXT,
-    img         TEXT          NOT NULL,
-    description TEXT,
-    producer    VARCHAR (255)
-);
-
 CREATE TABLE userRoles (
     id   INTEGER       PRIMARY KEY AUTOINCREMENT,
     name VARCHAR (255) UNIQUE
@@ -27,4 +17,25 @@ CREATE TABLE users (
     role     BIGINT        REFERENCES userRoles (id)
                            NOT NULL,
     password VARCHAR (255) NOT NULL
+);
+
+CREATE TABLE sessions (
+    id      INTEGER PRIMARY KEY AUTOINCREMENT,
+    session TEXT    NOT NULL,
+    userId  INTEGER REFERENCES users (id) ON DELETE CASCADE
+                    NOT NULL,
+    active  BOOLEAN NOT NULL
+                    DEFAULT (true)
+);
+
+CREATE TABLE products (
+    id          INTEGER       PRIMARY KEY AUTOINCREMENT,
+    name        VARCHAR (255) NOT NULL,
+    price       REAL          NOT NULL,
+    tags        TEXT,
+    img         TEXT          NOT NULL,
+    description TEXT,
+    producer    VARCHAR (255),
+    userId      BIGINT        REFERENCES users (id) ON DELETE CASCADE
+                              NOT NULL
 );

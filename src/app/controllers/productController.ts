@@ -17,11 +17,31 @@ export class ProductController extends ApiController {
     @SendsResponse()
     @HttpGet('/list')
     products() {
-        this.productService.getAll().subscribe((result) => {
+        this.productService.getAll(this.request, null).subscribe((result) => {
+                console.debug('Result', result);
                 this.response.status(HttpStatusCode.oK).json(result)
             },
             (error) => {
-                this.response.status(HttpStatusCode.notFound).json(null);
+                if (error == 666) {
+                    this.response.status(HttpStatusCode.forbidden).json('Brak sessji');
+                } else {
+                    this.response.status(HttpStatusCode.notFound).json(null);
+                }
+            })
+    }
+
+    @SendsResponse()
+    @HttpGet('/list/:userId')
+    productsById(userId) {
+        this.productService.getAll(this.request, userId).subscribe((result) => {
+                this.response.status(HttpStatusCode.oK).json(result)
+            },
+            (error) => {
+                if (error == 666) {
+                    this.response.status(HttpStatusCode.forbidden).json('Brak sessji');
+                } else {
+                    this.response.status(HttpStatusCode.notFound).json(null);
+                }
             })
     }
 
@@ -30,11 +50,15 @@ export class ProductController extends ApiController {
     @HttpPost('/add')
     add(body) {
         console.log(body)
-        this.productService.addProduct(body).subscribe((result) => {
+        this.productService.addProduct(this.request, body).subscribe((result) => {
                 this.response.status(HttpStatusCode.oK).json(result)
             },
             (error) => {
-                this.response.status(HttpStatusCode.notFound).json(error);
+                if (error == 666) {
+                    this.response.status(HttpStatusCode.forbidden).json('Brak sessji');
+                } else {
+                    this.response.status(HttpStatusCode.notFound).json(null);
+                }
             })
     }
 }

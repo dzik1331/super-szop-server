@@ -13,22 +13,33 @@ interface Product {
 }
 
 @Injectable()
-export class ProductService extends MainService{
+export class ProductService extends MainService {
 
-    getAll() {
+    getAll(request, userId) {
+
+        let sql = "Select * From products";
+        if (userId != null) {
+            sql = sql + ` WHERE userId = ${userId}`;
+        }
         return new Observable((observer) => {
-            database.all("Select * From products", (err, data) => {
-                if (err != null)
-                    observer.next(null);
-                else
-                    observer.next(data)
-                observer.complete();
-            });
+            this.checkSession(request).subscribe((result) => {
+                if (result) {
+                    database.all(sql, (err, data) => {
+                        if (err != null)
+                            observer.next(null);
+                        else
+                            observer.next(data);
+                        observer.complete();
+                    });
+                } else {
+                    this.sendSessionError(observer);
+                }
+            })
         })
 
     }
 
-    addProduct(data) {
+    addProduct(request, data) {
         return new Observable((observer) => {
             let sql = `INSERT INTO products (
                          producer,
@@ -36,7 +47,8 @@ export class ProductService extends MainService{
                          img,
                          tags,
                          price,
-                         name
+                         name,
+                         userId
                      )
                      VALUES (
                          ${this.dataToString(data.producer) || null},
@@ -44,18 +56,27 @@ export class ProductService extends MainService{
                          ${this.dataToString(data.img)},
                          ${this.dataToString(data.tags.join(',')) || null},
                          ${data.price},
-                         ${this.dataToString(data.name)}
+                         ${this.dataToString(data.name)},
+                         ${data.userId}
                      )`;
-            console.debug('SQL', sql);
-            database.run(sql, (err) => {
-                console.debug('err', err);
-                if (err) {
-                    observer.error(err)
-                } else {
-                    observer.next('Added')
+
+            this.checkSession(request).subscribe(
+                (result) => {
+                    if (result) {
+                        database.run(sql, (err) => {
+                            if (err) {
+                                observer.error(err)
+                            } else {
+                                observer.next('Added')
+                            }
+                            observer.complete();
+                        });
+                    } else {
+                        this.sendSessionError(observer);
+                    }
                 }
-                observer.complete();
-            });
+            )
+
         })
     }
 
