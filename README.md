@@ -27,8 +27,10 @@ Odpowiedź:
         login: 'Login', 
         name: 'Imię', 
         lastName: 'Nazwisko', 
-        role: 1
+        role: 1,
+        userSession: "sha1$a43f2aa2$1$9199c53aec821ff9249424ad49bb09190b138ad81543956615564"
     }
+    userSession należy potem wysyłać w każdym requeście w headerze user-session
 
 ##### Status 404
 
@@ -97,7 +99,7 @@ Odpowiedź:
             "name":"Nazwa",
             "price":12,
             "tags":"Elektronika",
-            "img":"http://images.pl/1.png",
+            "img": "obrazek1.png, obrazek2.png, obrazek3.jpg",
             "description":"Opis",
             "producer":'BikCompany',
             "userId": 12
@@ -116,7 +118,10 @@ Wysyłamy:
     {
         producer: 'Nazwa producenta',
         description: 'Opis',
-        img: 'Adres zdjęcia',
+        "img": {
+                    name: "Nazwa pliku",
+                    result: /9j/4AAQSkZJRgABAQAAAQABAAD/4QAYRXhpZgAASUkqAAgAAA - obrazek w base64
+         },
         tags: ['tag1,tag2,tag3'],
         price: 99.99,
         name: 'Nazwa produktu',

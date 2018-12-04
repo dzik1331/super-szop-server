@@ -39,7 +39,7 @@ export class ProductService extends MainService {
 
     }
 
-    addProduct(request, data) {
+    addProduct(request, data, images) {
         return new Observable((observer) => {
             let sql = `INSERT INTO products (
                          producer,
@@ -53,7 +53,7 @@ export class ProductService extends MainService {
                      VALUES (
                          ${this.dataToString(data.producer) || null},
                          ${this.dataToString(data.description) || null},
-                         ${this.dataToString(data.img)},
+                         ${this.dataToString(images.join(','))},
                          ${this.dataToString(data.tags.join(',')) || null},
                          ${data.price},
                          ${this.dataToString(data.name)},

@@ -10,8 +10,10 @@ const app = express();
 const port = process.env.PORT || 8443;
 const sqlite3 = require('sqlite3').verbose();
 /************ basic express-setup **************/
-app.use(bodyParser.json());
+app.use(bodyParser.json({limit: '50mb'}));
+app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 app.use(cors());
+app.use(express.static('public'));
 // Dino requires express app instance
 // and the base-uri on which dino app to be mounted
 const dino = new Dino(app, '/api');

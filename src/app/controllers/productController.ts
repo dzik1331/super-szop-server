@@ -1,6 +1,6 @@
 import {ApiController, Controller, HttpGet, HttpPost, HttpStatusCode, SendsResponse} from 'dinoloop';
 import {ProductService} from "../services/product.service";
-import {database} from "../app";
+import * as fs from "fs";
 
 @Controller('/product')
 export class ProductController extends ApiController {
@@ -49,8 +49,13 @@ export class ProductController extends ApiController {
     @SendsResponse()
     @HttpPost('/add')
     add(body) {
-        console.log(body)
-        this.productService.addProduct(this.request, body).subscribe((result) => {
+        const images = [];
+        body.img.forEach((image, index) => {
+            const name = new Date().getTime() + '_' + body.img[index].name;
+            images.push(name);
+            fs.writeFileSync("public/images/" + name, body.img[index].result, 'base64');
+        });
+        this.productService.addProduct(this.request, body, images).subscribe((result) => {
                 this.response.status(HttpStatusCode.oK).json(result)
             },
             (error) => {

@@ -13,12 +13,11 @@ export class MainService {
     checkSession(request) {
         return new Observable((observer) => {
             const session = request.headers['user-session'];
-
             if (session == null || session == undefined || session == '') {
-                observer.next(666);
+                observer.next(false);
                 observer.complete();
+                return;
             }
-
             database.get(`Select session, userId, active From sessions WHERE session = '${session}'`, (err, data) => {
                 if (err != null)
                     observer.next(false);
