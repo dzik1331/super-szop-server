@@ -80,6 +80,37 @@ export class ProductService extends MainService {
         })
     }
 
+    removeProduct(request, productId, userId) {
+        return new Observable((observer) => {
+            let sql = `DELETE FROM products
+                        WHERE id = ${productId} AND  
+                              userId = ${userId};`;
+
+            this.checkSession(request).subscribe(
+                (result: any) => {
+                    if (result) {
+                        if (result.userId == userId) {
+                            database.run(sql, (err) => {
+                                if (err) {
+                                    observer.error(err)
+                                } else {
+                                    observer.next('Deleted')
+                                }
+                                observer.complete();
+                            });
+                        } else {
+                            observer.error(777);
+                            observer.complete();
+                        }
+                    } else {
+                        this.sendSessionError(observer);
+                    }
+                }
+            )
+
+        })
+    }
+
 
     getTags() {
         return [

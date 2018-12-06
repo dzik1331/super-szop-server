@@ -1,4 +1,4 @@
-import {ApiController, Controller, HttpGet, HttpPost, HttpStatusCode, SendsResponse} from 'dinoloop';
+import {ApiController, Controller, HttpDelete, HttpGet, HttpPost, HttpStatusCode, SendsResponse} from 'dinoloop';
 import {ProductService} from "../services/product.service";
 import * as fs from "fs";
 
@@ -59,6 +59,21 @@ export class ProductController extends ApiController {
             }
         });
         this.productService.addProduct(this.request, body, images).subscribe((result) => {
+                this.response.status(HttpStatusCode.oK).json(result)
+            },
+            (error) => {
+                if (error == 666) {
+                    this.response.status(HttpStatusCode.forbidden).json('Brak sessji');
+                } else {
+                    this.response.status(HttpStatusCode.notFound).json(null);
+                }
+            })
+    }
+
+    @SendsResponse()
+    @HttpDelete('/remove/:id/:userId')
+    remove(id, userId) {
+        this.productService.removeProduct(this.request, id, userId).subscribe((result) => {
                 this.response.status(HttpStatusCode.oK).json(result)
             },
             (error) => {
