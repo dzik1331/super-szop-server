@@ -12,6 +12,8 @@
 
 [Dodawanie produktu](#dodawanie-produktu)
 
+[Usuwanie produktu](#usuwanie-produktu)
+
 ## **Logowanie**
 
 `/api/user/login [POST]`
@@ -134,4 +136,22 @@ Odpowiedź:
     Added
 ##### Status: 404
     NO_FOUND
+********************************
+
+## **Usuwanie produktu**
+
+`/api/product/remove/:productId/:userId [DELETE]`
+
+
+
+Odpowiedź:
+
+##### Status: 200
+    Deleted
+##### Status: 404
+    NO_FOUND
+##### Status: 666
+     Brak sesji
+##### Status: 777
+     Nie można usunąć
 ********************************
