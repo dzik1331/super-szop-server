@@ -4,6 +4,7 @@ import * as fs from "fs";
 
 @Controller('/product')
 export class ProductController extends ApiController {
+    private LIMIT_IMAGES = 4;
 
     constructor(private productService: ProductService) {
         super();
@@ -51,9 +52,11 @@ export class ProductController extends ApiController {
     add(body) {
         const images = [];
         body.img.forEach((image, index) => {
-            const name = new Date().getTime() + '_' + body.img[index].name;
-            images.push(name);
-            fs.writeFileSync("public/images/" + name, body.img[index].result, 'base64');
+            if (index < this.LIMIT_IMAGES) {
+                const name = new Date().getTime() + '_' + body.img[index].name;
+                images.push(name);
+                fs.writeFileSync("public/images/" + name, body.img[index].result, 'base64');
+            }
         });
         this.productService.addProduct(this.request, body, images).subscribe((result) => {
                 this.response.status(HttpStatusCode.oK).json(result)
