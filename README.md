@@ -12,6 +12,8 @@
 
 [Dodawanie produktu](#dodawanie-produktu)
 
+[Edycja produktu](#edycja-produktu)
+
 [Usuwanie produktu](#usuwanie-produktu)
 
 ## **Logowanie**
@@ -134,6 +136,31 @@ Odpowiedź:
 
 ##### Status: 200
     Added
+##### Status: 404
+    NO_FOUND
+********************************
+
+## **Edycja produktu**
+
+`/api/product/edit/:id [PUT]`
+
+Wysyłamy:
+ 
+    {
+        producer: 'Nazwa producenta',
+        description: 'Opis',
+        tags: ['tag1,tag2,tag3'],
+        price: 99.99,
+        name: 'Nazwa produktu',
+        userId: 1
+    }
+
+Nie można edytować obrazków produktu
+
+Odpowiedź:
+
+##### Status: 200
+    Edited
 ##### Status: 404
     NO_FOUND
 ********************************

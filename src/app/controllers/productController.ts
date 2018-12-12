@@ -1,4 +1,13 @@
-import {ApiController, Controller, HttpDelete, HttpGet, HttpPost, HttpStatusCode, SendsResponse} from 'dinoloop';
+import {
+    ApiController,
+    Controller,
+    HttpDelete,
+    HttpGet,
+    HttpPost,
+    HttpPut,
+    HttpStatusCode,
+    SendsResponse
+} from 'dinoloop';
 import {ProductService} from "../services/product.service";
 import * as fs from "fs";
 
@@ -19,6 +28,22 @@ export class ProductController extends ApiController {
     @HttpGet('/list')
     products() {
         this.productService.getAll(this.request, null).subscribe((result) => {
+                console.debug('Result', result);
+                this.response.status(HttpStatusCode.oK).json(result)
+            },
+            (error) => {
+                if (error == 666) {
+                    this.response.status(HttpStatusCode.forbidden).json('Brak sessji');
+                } else {
+                    this.response.status(HttpStatusCode.notFound).json(null);
+                }
+            })
+    }
+
+    @SendsResponse()
+    @HttpGet('/get/:userId/:id')
+    product(userId, id) {
+        this.productService.get(this.request, userId, id).subscribe((result) => {
                 console.debug('Result', result);
                 this.response.status(HttpStatusCode.oK).json(result)
             },
@@ -62,6 +87,22 @@ export class ProductController extends ApiController {
                 this.response.status(HttpStatusCode.oK).json(result)
             },
             (error) => {
+                if (error == 666) {
+                    this.response.status(HttpStatusCode.forbidden).json('Brak sessji');
+                } else {
+                    this.response.status(HttpStatusCode.notFound).json(null);
+                }
+            })
+    }
+
+    @SendsResponse()
+    @HttpPut('/edit/:id')
+    edit(body, id) {
+        this.productService.editProduct(this.request, body, id).subscribe((result) => {
+                this.response.status(HttpStatusCode.oK).json(result)
+            },
+            (error) => {
+            console.debug('errr',error);
                 if (error == 666) {
                     this.response.status(HttpStatusCode.forbidden).json('Brak sessji');
                 } else {
