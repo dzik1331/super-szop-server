@@ -101,12 +101,13 @@ Odpowiedź:
         {
             "id":14,
             "name":"Nazwa",
-            "price":12,
+            "price": 12,
             "tags":"Elektronika",
             "img": "obrazek1.png, obrazek2.png, obrazek3.jpg",
-            "description":"Opis",
-            "producer":'BikCompany',
-            "userId": 12
+            "description": "Opis",
+            "producer": "BikCompany",
+            "userId": 12,
+            "seller": "Bogdan36"
             }
             ,...
     ]

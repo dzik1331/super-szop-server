@@ -17,10 +17,12 @@ export class ProductService extends MainService {
 
     getAll(request, userId) {
 
-        let sql = "Select * From products";
+        let sql = "Select p.id, p.name, p.price, p.tags, p.img, p.description, p.producer, p.userId, users.login as seller From products as p";
+        sql = sql + ' LEFT JOIN users on users.id = p.userId';
         if (userId != null) {
             sql = sql + ` WHERE userId = ${userId}`;
         }
+        console.debug(sql);
         return new Observable((observer) => {
             this.checkSession(request).subscribe((result) => {
                 if (result) {
