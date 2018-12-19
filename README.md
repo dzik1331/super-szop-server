@@ -68,12 +68,15 @@ Odpowiedź:
 
 ##### Status: 200
     [
-        "id": 5
-        "lastName": "Nieradzik"
-        "login": "krzynie1331"
-        "name": "Krzysztof"
-        "role": 2
-        "roleName": "użytkownik"
+        {
+            "id": 5
+            "lastName": "Nieradzik"
+            "login": "krzynie1331"
+            "name": "Krzysztof"
+            "role": 2
+            "roleName": "użytkownik"
+        },
+        ...
     ]
 ##### Status: 404
 ********************************
