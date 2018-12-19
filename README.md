@@ -4,6 +4,8 @@
 
 [Role użytkownika](#role-użytkownika)
 
+[Lista użytkowników](#lista-użytkowników)
+
 [Dodawanie użytkownika](#dodawanie-użytkownika)
 
 [Lista tagów](#lista-tagów)
@@ -53,6 +55,25 @@ Odpowiedź:
         {"id":1,"name":"administrator"},
         {"id":2,"name":"użytkownik"},
         {"id":3,"name":"sprzedawca"}
+    ]
+##### Status: 404
+********************************
+
+## **Lista użytkowników**
+
+`/api/user/all [Get]`
+
+
+Odpowiedź:
+
+##### Status: 200
+    [
+        "id": 5
+        "lastName": "Nieradzik"
+        "login": "krzynie1331"
+        "name": "Krzysztof"
+        "role": 2
+        "roleName": "użytkownik"
     ]
 ##### Status: 404
 ********************************

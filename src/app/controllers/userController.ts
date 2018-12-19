@@ -9,6 +9,22 @@ export class UserController extends ApiController {
     }
 
     @SendsResponse()
+    @HttpGet('/all')
+    users() {
+        this.userService.getAll(this.request).subscribe((result) => {
+                console.debug('Result', result);
+                this.response.status(HttpStatusCode.oK).json(result)
+            },
+            (error) => {
+                if (error == 666) {
+                    this.response.status(HttpStatusCode.forbidden).json('Brak sessji');
+                } else {
+                    this.response.status(HttpStatusCode.notFound).json(null);
+                }
+            })
+    }
+
+    @SendsResponse()
     @HttpPost('/login')
     login(body: any) {
         console.log(body);

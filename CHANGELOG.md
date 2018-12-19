@@ -7,3 +7,7 @@
 # 16.12.2018
 
 - lista produktów zwraca dodatkowo pole seller czyli login sprzedawcy
+
+# 19.12.2018
+
+- dodano możliwość pobrania listy użytkowników
