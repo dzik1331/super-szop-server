@@ -8,6 +8,26 @@ import * as c from "password-hash"
 export class UserService extends MainService {
 
 
+    getAll(request) {
+        let sql = "Select users.id, users.login, users.name, users.lastName, users.role, userRoles.name as roleName From users LEFT JOIN userRoles on userRoles.id = role";
+        return new Observable((observer) => {
+            this.checkSession(request).subscribe((result) => {
+                if (result) {
+                    database.all(sql, (err, data) => {
+                        console.debug('errrrr', err);
+                        if (err != null)
+                            observer.next(null);
+                        else
+                            observer.next(data);
+                        observer.complete();
+                    });
+                } else {
+                    this.sendSessionError(observer);
+                }
+            })
+        })
+    }
+
     login(userData) {
         return new Observable((observer) => {
             database.get(`Select id, login, name, lastName, role, password From users WHERE login = '${userData.login}'`, (err, data) => {
@@ -91,6 +111,20 @@ export class UserService extends MainService {
                     observer.error(err)
                 } else {
                     observer.next('Added')
+                }
+                observer.complete();
+            });
+        })
+    }
+
+    deleteUser(id) {
+        return new Observable((observer) => {
+            let sql = `DELETE FROM users WHERE id = ${id}`;
+            database.run(sql, (err) => {
+                if (err) {
+                    observer.error(err)
+                } else {
+                    observer.next('Removed')
                 }
                 observer.complete();
             });

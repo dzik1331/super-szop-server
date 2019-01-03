@@ -4,7 +4,11 @@
 
 [Role użytkownika](#role-użytkownika)
 
+[Lista użytkowników](#lista-użytkowników)
+
 [Dodawanie użytkownika](#dodawanie-użytkownika)
+
+[Usuwanie użytkownika](#usuwanie-użytkownika)
 
 [Lista tagów](#lista-tagów)
 
@@ -57,6 +61,28 @@ Odpowiedź:
 ##### Status: 404
 ********************************
 
+## **Lista użytkowników**
+
+`/api/user/all [Get]`
+
+
+Odpowiedź:
+
+##### Status: 200
+    [
+        {
+            "id": 5
+            "lastName": "Nieradzik"
+            "login": "krzynie1331"
+            "name": "Krzysztof"
+            "role": 2
+            "roleName": "użytkownik"
+        },
+        ...
+    ]
+##### Status: 404
+********************************
+
 ## **Dodawanie użytkownika**
 
 `/api/user/add [POST]`
@@ -75,6 +101,17 @@ Odpowiedź:
 
 ##### Status: 200
     Added
+##### Status: 404
+********************************
+
+## **Usuwanie użytkownika**
+
+`/api/user/delete/:id [DELETE]`
+
+Odpowiedź:
+
+##### Status: 200
+    Removed
 ##### Status: 404
 ********************************
 
