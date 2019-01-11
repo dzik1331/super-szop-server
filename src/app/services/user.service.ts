@@ -28,6 +28,26 @@ export class UserService extends MainService {
         })
     }
 
+    getUser(request, userId) {
+        let sql = `Select id, login, name, lastName, role From users WHERE id = ${userId}`;
+        return new Observable((observer) => {
+            this.checkSession(request).subscribe((result) => {
+                if (result) {
+                    database.get(sql, (err, data) => {
+                        console.debug('errrrr', err);
+                        if (err != null)
+                            observer.next(null);
+                        else
+                            observer.next(data);
+                        observer.complete();
+                    });
+                } else {
+                    this.sendSessionError(observer);
+                }
+            })
+        })
+    }
+
     login(userData) {
         return new Observable((observer) => {
             database.get(`Select id, login, name, lastName, role, password From users WHERE login = '${userData.login}'`, (err, data) => {
@@ -106,6 +126,25 @@ export class UserService extends MainService {
                          ${this.dataToString(c.generate(data.password))},
                          ${data.role}
                      )`;
+            database.run(sql, (err) => {
+                if (err) {
+                    observer.error(err)
+                } else {
+                    observer.next('Added')
+                }
+                observer.complete();
+            });
+        })
+    }
+
+    editUser(data) {
+        return new Observable((observer) => {
+            let sql = `UPDATE users
+                        SET login = ${this.dataToString(data.login)},
+                        name = ${this.dataToString(data.name)},
+                        lastName = ${this.dataToString(data.lastName)},
+                        role = ${data.role}
+                        WHERE id = ${data.id};`;
             database.run(sql, (err) => {
                 if (err) {
                     observer.error(err)

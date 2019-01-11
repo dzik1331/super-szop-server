@@ -6,7 +6,11 @@
 
 [Lista użytkowników](#lista-użytkowników)
 
+[Użytkownik](#użytkownik)
+
 [Dodawanie użytkownika](#dodawanie-użytkownika)
+
+[Edycja użytkownika](#edycja-użytkownika)
 
 [Usuwanie użytkownika](#usuwanie-użytkownika)
 
@@ -83,6 +87,28 @@ Odpowiedź:
 ##### Status: 404
 ********************************
 
+## **Użytkownik**
+
+`/api/user/get-user/:id [Get]`
+
+
+Odpowiedź:
+
+##### Status: 200
+    [
+        {
+            "id": 5
+            "lastName": "Nieradzik"
+            "login": "krzynie1331"
+            "name": "Krzysztof"
+            "role": 2
+            "roleName": "użytkownik"
+        },
+        ...
+    ]
+##### Status: 404
+********************************
+
 ## **Dodawanie użytkownika**
 
 `/api/user/add [POST]`
@@ -103,6 +129,26 @@ Odpowiedź:
     Added
 ##### Status: 404
 ********************************
+
+## **Edycja użytkownika**
+
+`/api/user/edit [PUT]`
+
+Wysyłamy:
+ 
+    {
+        id: 1
+        login: 'Janko13',
+        name: 'Jan',
+        lastName: 'Kowalski',
+        role: 1
+    }
+
+Odpowiedź:
+
+##### Status: 200
+    Added
+##### Status: 404
 
 ## **Usuwanie użytkownika**
 

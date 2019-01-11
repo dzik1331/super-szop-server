@@ -1,4 +1,13 @@
-import {ApiController, Controller, HttpDelete, HttpGet, HttpPost, HttpStatusCode, SendsResponse} from 'dinoloop';
+import {
+    ApiController,
+    Controller,
+    HttpDelete,
+    HttpGet,
+    HttpPost,
+    HttpPut,
+    HttpStatusCode,
+    SendsResponse
+} from 'dinoloop';
 import {UserService} from "../services/user.service";
 
 @Controller('/user')
@@ -12,6 +21,22 @@ export class UserController extends ApiController {
     @HttpGet('/all')
     users() {
         this.userService.getAll(this.request).subscribe((result) => {
+                console.debug('Result', result);
+                this.response.status(HttpStatusCode.oK).json(result)
+            },
+            (error) => {
+                if (error == 666) {
+                    this.response.status(HttpStatusCode.forbidden).json('Brak sessji');
+                } else {
+                    this.response.status(HttpStatusCode.notFound).json(null);
+                }
+            })
+    }
+
+    @SendsResponse()
+    @HttpGet('/get-user/:id')
+    user(id) {
+        this.userService.getUser(this.request, id).subscribe((result) => {
                 console.debug('Result', result);
                 this.response.status(HttpStatusCode.oK).json(result)
             },
@@ -55,6 +80,18 @@ export class UserController extends ApiController {
     add(body) {
         console.log(body)
         this.userService.addUser(body).subscribe((result) => {
+                this.response.status(HttpStatusCode.oK).json(result)
+            },
+            (error) => {
+                this.response.status(HttpStatusCode.notFound).json(error);
+            })
+    }
+
+    @SendsResponse()
+    @HttpPut('/edit')
+    edit(body) {
+        console.log(body)
+        this.userService.editUser(body).subscribe((result) => {
                 this.response.status(HttpStatusCode.oK).json(result)
             },
             (error) => {

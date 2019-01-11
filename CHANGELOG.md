@@ -15,3 +15,8 @@
 # 03.01.2019
 
 - dodano możliwość usuwania użytkownika
+
+# 11.01.2019
+
+- dodano możliwość pobrania informacji o pojedynczym użytkowniku
+- dodano możliwość edycji użytkownika
